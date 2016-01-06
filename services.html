@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+ <script src="js/AngularCustomScript.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="myModule">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+             <ul class="sidebar-nav">
+                <li>
+                    <a href="index.html">About</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12" ng-controller="myController">
+                        <h1>Simple life on campus</h1>
+                        <p>When your campus is located in the heart of a beautiful thriving city, student life takes on a vibrant metro vibe. 
+						You have all the eclectic choices of an exciting city within walking distance from your student housing and classrooms. 
+						</p>
+                        <p>Life at Harrisburg University goes way beyond the classroom. Take your pick of student organizations, clubs and countless social and educational programs throughout the year. Whatever you want from your college experience – leadership opportunities, multicultural enrichment, an active social life—it’s here at HU! Don’t see a club that fits your interests? There’s a saying at HU that goes “if you can’t find a club to join, get a few of your best friends and start a new one.” Each year new clubs are created by students. So you can create a club that fits your needs.
+
+This is your HU. It is you, the students, who give HU its unique character and identity. We are a community that embraces diversity – both in the people who learn, work and live here
+ and in the experiences that enrich life in the classroom and beyond.</p>
+ <strong>Below Table is getting Data from Angular Js Modules and Controllers</strong>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="employee in employees">
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.Lastname}}</td>
+        <td>{{employee.Email}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
